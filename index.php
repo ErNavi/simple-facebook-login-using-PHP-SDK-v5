@@ -7,7 +7,7 @@ include 'fbconfig.php';
 
 $helper = $fb->getRedirectLoginHelper();
 
-$permissions = ['email']; // Optional permissions
+$permissions = ['email, pages_show_list']; // Optional permissions
 $loginUrl = $helper->getLoginUrl($my_url.'/login-callback.php', $permissions);
 
 if ($_SESSION['fb_id']) {
